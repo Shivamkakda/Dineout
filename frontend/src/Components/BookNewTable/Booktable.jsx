@@ -25,7 +25,7 @@ const Tabledisplaydata = () => {
 
   const [resturent, setResturent] = useState([]);
   const getResturents = async () => {
-    const response = await fetch('https://backend-dineout.herokuapp.com/restaurants', { mode: "cors" });
+    const response = await fetch('https://backend-dineout.herokuapp.com/restaurants/featured', { mode: "cors" });
     const data = await response.json()
     console.log(data)
     setResturent(data.data);
